@@ -2,7 +2,7 @@ function binarySearch(list, element) {
     var hi = list.length - 1;
     var lo = 0;
     var mid;
-    while(hi != lo){
+    while(hi > lo){
         mid = Math.floor((hi + lo)/ 2);
         if(list[mid] == element){ 
             return mid;
@@ -11,6 +11,6 @@ function binarySearch(list, element) {
         }else{
             lo = mid+1;
         }
-    }     
+    }
     return -1;
 }

@@ -13,5 +13,5 @@ function binarySearch(list, element) {
             lo = mid+1;
         }
     }
-    return -1;
+    if(hi>lo) return -1;
 }

@@ -9,13 +9,13 @@ function binarySearch(list, element) {
         if(list[mid] == element){ 
             let left = mid-1;
             indices.push(mid);
-            while((left >= 0) && (list[left] == element)){
+            while((left >= lo) && (list[left] == element)){
                 indices.push(left);
                 left--;
             }
 
             let right = mid+1;
-            while((right< list.length) && (list[right] == element)){
+            while((right<= hi) && (list[right] == element)){
                 indices.push(right);
                 right++;
             }

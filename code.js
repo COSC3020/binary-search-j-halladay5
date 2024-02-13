@@ -2,25 +2,14 @@ function binarySearch(list, element) {
     var hi = list.length - 1;
     var lo = 0;
     var mid;
-    var indices = [];
     
     while(hi >= lo){
         mid = Math.floor((hi + lo)/ 2);
         if(list[mid] == element){ 
-            let left = mid-1;
-            indices.push(mid);
-            while((left >= lo) && (list[left] == element)){
-                indices.push(left);
-                left--;
-            }
-
-            let right = mid+1;
-            while((right<= hi) && (list[right] == element)){
-                indices.push(right);
-                right++;
-            }
-            
-            return indices;
+                while(list[lo] != element){
+                    lo++;
+                }
+                return lo;
         }else if(list[mid] > element){
             hi = mid-1;
         }else{
